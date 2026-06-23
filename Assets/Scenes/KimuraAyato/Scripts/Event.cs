@@ -42,6 +42,11 @@ public class Event : MonoBehaviour
         }
         switch (page)
         {
+            //↓テンプレート(テキスト)
+            //case 2:
+            //    StoryProgression.text = "";
+            //    break;
+
             case 0:
                 img.sprite = title;
                 STORY.SetActive(false);
@@ -53,11 +58,28 @@ public class Event : MonoBehaviour
                 break;
 
             case 2:
-
-
-
+                StoryProgression.text = "俺は掲示されているクラス表を見ていた。";
                 break;
 
+            case 3:
+                StoryProgression.text = "「悠くん。同じクラスだね！」";
+                break;
+
+            case 4:
+                StoryProgression.text = "声をかけてきたのは\n幼馴染の逢沢 小春(あいざわ こはる)。\n小中高同じで隣に住んでいる女の子だ。";
+                break;
+
+            case 5:
+                StoryProgression.text = "小さい頃から一緒だったが、\n高校で同じクラスになるのは初めてだ。";
+                break;
+
+            case 6:
+                StoryProgression.text = "クラスでは各々が\n今までの友人などで集まっていた。";
+                break;
+
+            case 7:
+                StoryProgression.text = "俺の友人たちは全員別クラスになっていて、知っている人は小春だけだった。";
+                break;
         }
     }
 }
