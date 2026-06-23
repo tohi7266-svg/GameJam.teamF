@@ -4,16 +4,16 @@ using UnityEngine.UI;
 public class Novel : MonoBehaviour
 {
     public Image Image;
-    public GameObject NovelParts;
+    public GameObject NovelParts;//選択肢・テキストボックスの表示の操作のためのパーツ。選択肢などを中に入れる。
     public Sprite title;
     public Sprite page1;
     public Sprite page100;
-    public GameObject SelAns;
-    public Text story;
+    public GameObject SelAns;//選択中背景
+    public Text story;//物語を表示するパーツ
     public Text Select1;
     public Text Select2;
     public Text Select3;
-    public GameObject Select;
+    public GameObject Select;//選択肢の表示の操作のためのパーツ。選択肢を中に入れる。
 
     private int page = 0;
     private int SelNo = 0;
@@ -28,16 +28,16 @@ public class Novel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return))//もしエンターキーが押されたなら
         {
             if (page == 7)
             {
-                if (SelNo != 1)
+                if (SelNo != 1)//もしセルナンバーが1じゃなかったら
                 {
                     page = 99;
                 }
             }
-            page++;
+            page++;//ページを1足す
         }
         switch (page)
         {
@@ -123,22 +123,22 @@ public class Novel : MonoBehaviour
                 break;
 
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))//左矢印キーで左へ
         {
-            if (SelNo > 0) SelNo--;
+            if (SelNo > 0) SelNo--;//左にスタックしないようにセルナンバーを制限
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))//右矢印キーで右へ
         {
-            if (SelNo < 1) SelNo++;
+            if (SelNo < 1) SelNo++;//右にスタックしないようにセルナンバーを制限
         }
         Transform transform = SelAns.GetComponent<Transform>();
         switch (SelNo)
         {
             case 0:
-                transform.localPosition = new Vector3(-300, 150, 0);
+                transform.localPosition = new Vector3(-300, 150, 0);//セルアンスの位置調整
                 break;
             case 1:
-                transform.localPosition = new Vector3(300, 150, 0);
+                transform.localPosition = new Vector3(300, 150, 0);//セルアンスの位置調整
                 break;
 
         }
