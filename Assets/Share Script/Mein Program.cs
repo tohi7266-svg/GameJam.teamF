@@ -12,6 +12,7 @@ public class Novel : MonoBehaviour
     public Text story;
     public Text Select1;
     public Text Select2;
+    public Text Select3;
     public GameObject Select;
 
     private int page = 0;
