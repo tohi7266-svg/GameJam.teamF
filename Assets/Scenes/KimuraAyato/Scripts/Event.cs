@@ -23,6 +23,7 @@ public class Event : MonoBehaviour
 
     private int page = 0;//ページ番号
     private int SelNo = 0;//選択中背景
+ 　 //その他
     private Image img;
 
 
