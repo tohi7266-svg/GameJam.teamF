@@ -5,9 +5,11 @@ public class Event : MonoBehaviour
     public Image Image;
     public GameObject STORY;//選択肢・テキストボックスの表示の操作のためのパーツ。選択肢などを中に入れる。
     public Text StoryProgression;//物語を表示するテキストボックス
+
     //画像
     public Sprite title;
-
+    public Sprite SchoolSpring;
+    public Sprite Class;
 
     //選択肢
     public GameObject Select;//選択肢の表示の操作のためのパーツ。選択肢を中に入れる。
@@ -49,15 +51,15 @@ public class Event : MonoBehaviour
 
             //↓テンプレート(選択肢)
             //case 8:
-            //    STORY.SetActive(true);
-            //    Select.SetActive(true);
-            //    img.sprite = title;
-            //    StoryProgression.text = "";
-            //    Options1.text = "1:" + "A";
-            //    Options2.text = "2:" + "B";
-            //    Options3.text = "3:" + "C";
-            //    break;
-            case 0:
+            //STORY.SetActive(true);
+            //Select.SetActive(true);
+            //img.sprite = title;
+            //StoryProgression.text = "";
+            //Options1.text = "1:" + "A";
+            //Options2.text = "2:" + "B";
+            //Options3.text = "3:" + "C";
+            //break;
+        case 0:
                 img.sprite = title;
                 STORY.SetActive(false);
                 break;
@@ -65,6 +67,7 @@ public class Event : MonoBehaviour
                 StandardizedScore = 40;
                 Select.SetActive(false);
                 STORY.SetActive(true);
+                img.sprite = SchoolSpring;
                 StoryProgression.text = "今日は高校最後の年の始業式。\n学年が変わるということはクラスも変わる。";
                 break;
 
@@ -85,13 +88,13 @@ public class Event : MonoBehaviour
                 break;
 
             case 6:
+                img.sprite = Class;
                 StoryProgression.text = "クラスでは各々が\n今までの友人などで集まっていた。";
                 break;
 
             case 7:
                 StoryProgression.text = "俺の友人たちは全員別クラスになっていて、知っている人は小春だけだった。";
                 break;
-
 
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))//上矢印キーで上へ
