@@ -226,8 +226,59 @@ public class eventkairyou : MonoBehaviour
             case 1125:
                 StoryProgression.text = "鼻歌を歌いながら機嫌よく歩く小春の後ろ姿がその日ずっと頭から離れなかった";
                 break;
-           
 
+
+
+
+            //goodend
+            case 1201:
+                StoryProgression.text = "「やった！私たちどっちも合格だよ！」";
+                break;
+            case 1202:
+                StoryProgression.text = "小春がこちらを見て言う。";
+                break;
+            case 1203:
+                StoryProgression.text = "俺は小春と同じ大学にすすんだ。";
+                break;
+            case 1204:
+                StoryProgression.text = "決めたのはギリギリではあったが、\n難なく合格することができた";
+                break;
+            case 1205:
+                StoryProgression.text = "ここに決めた理由はまだ小春には伝えてない。";
+                break;
+            case 1206:
+                StoryProgression.text = "ここに決めたのは…";
+                break;
+            case 1207:
+                StoryProgression.text = "小春がいたから―――";
+                break;
+            case 1208:
+                StoryProgression.text = "ＧＯＯＤ　ＥＮＤ";
+                break;
+
+
+
+
+
+
+
+
+            //badend
+            case 1301:
+                StoryProgression.text = "俺は燃え尽きていた";
+                break;
+            case 1302:
+                StoryProgression.text = "決めた進路先の受験に失敗したのだ";
+                break;
+            case 1303:
+                StoryProgression.text = "実力が及ばなかった";
+                break;
+            case 1304:
+                StoryProgression.text = "滑り止めに行く気も起きず、部屋の隅で丸まっていた。";
+                break;
+            case 1305:
+                StoryProgression.text = "BAD END";
+                break;
         }
     }
 }
