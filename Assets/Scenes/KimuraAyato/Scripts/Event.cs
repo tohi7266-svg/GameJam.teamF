@@ -62,6 +62,7 @@ public class Event : MonoBehaviour
                 STORY.SetActive(false);
                 break;
             case 1:
+                StandardizedScore = 40;
                 Select.SetActive(false);
                 STORY.SetActive(true);
                 StoryProgression.text = "今日は高校最後の年の始業式。\n学年が変わるということはクラスも変わる。";
