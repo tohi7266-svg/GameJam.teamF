@@ -84,7 +84,7 @@ public class eventkairyou : MonoBehaviour
 
 
 
-
+                //席替えと日直
             case 1000:
                 StoryProgression.text = "「隣の席だね！悠くん！」";
                 break;
@@ -145,7 +145,89 @@ public class eventkairyou : MonoBehaviour
             case 1019:
                 StoryProgression.text = "大したことでもないことを言い合いながら、二年通った道を2人で帰った";
                 break;
-            
+
+
+
+
+                //文化祭
+
+            case 1101:
+                StoryProgression.text = "夏休みが終わり、九月。\n高校生最後の文化祭がやってきた";
+                break;
+            case 1102:
+                StoryProgression.text = "舞台発表や出店、どれも興味を唆る";
+                break;
+            case 1103:
+                StoryProgression.text = "一人で回るのも寂しいから小春を誘おうと思う";
+                break;
+            case 1104:
+                StoryProgression.text = "当番が終わってすぐの小春を誘うことにした";
+                break;
+            case 1105:
+                StoryProgression.text = "「うん！いいよ！」";
+                break;
+            case 1106:
+                StoryProgression.text = "朝から準備に追われて俺の一つ前の枠で\n当番をしていたのに元気だ";
+                break;
+            case 1107:
+                StoryProgression.text = "「どこから回る？」";
+                break;
+            case 1108:
+                StoryProgression.text = "そうだなぁ…";
+                break;
+            case 1109:
+                StoryProgression.text = "――――――";
+                break;
+            case 1110:
+                StoryProgression.text = "他クラスの出店を一通り回った後、他学年の舞台発表や展示を見て回った。";
+                break;
+            case 1111:
+                StoryProgression.text = "全部を回った訳では無いけれど、時間が過ぎるのは早いもので。";
+                break;
+            case 1112:
+                StoryProgression.text = "『文化祭を終了します』";
+                break;
+            case 1113:
+                StoryProgression.text = "そんな終了宣言と共に高校最後の文化祭は終わりを迎えた";
+                break;
+            case 1114:
+                StoryProgression.text = "――――――";
+                break;
+            case 1115:
+                StoryProgression.text = "「終わっちゃったねー文化祭」";
+                break;
+            case 1116:
+                StoryProgression.text = "二人での帰り道、小春がそんなことを言う";
+                break;
+            case 1117:
+                StoryProgression.text = "「そういえば悠くんはまだ進路決めてないんだっけ？」";
+                break;
+            case 1118:
+                StoryProgression.text = "不意にそんなことを聞かれる";
+                break;
+            case 1119:
+                StoryProgression.text = "俺は未だに進学先を決めていなかった。先生からも色々\n言われているがどうしてもここが良いという進路\nが無かったのだ。";
+                break;
+            case 1120:
+                StoryProgression.text = "少し前のを歩く小春の後ろ姿を見ながら、自分の進路を考える。";
+                break;
+            case 1121:
+                StoryProgression.text = "「今日は誘ってくれてありがとうね！悠くん」";
+                break;
+            case 1122:
+                StoryProgression.text = "パッと小春がこちらに振り返る。\nそれを俺は逃げる暇もなく目に入れてしまった。";
+                break;
+            case 1123:
+                StoryProgression.text = "「あ、あぁうん。こちらこそ」";
+                break;
+            case 1124:
+                StoryProgression.text = "ちょっと動揺しながら答えた。";
+                break;
+            case 1125:
+                StoryProgression.text = "鼻歌を歌いながら機嫌よく歩く小春の後ろ姿がその日ずっと頭から離れなかった";
+                break;
+           
+
         }
     }
 }
