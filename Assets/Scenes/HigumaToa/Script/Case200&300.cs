@@ -46,7 +46,7 @@ public class EventCase200 : MonoBehaviour
             {
                 if (SelNo == 1)
                 {
-                    page = 99;
+                    page = 102;
                 }
                 else if (SelNo == 2)//もしセルナンバーが1じゃなかったら
                 {

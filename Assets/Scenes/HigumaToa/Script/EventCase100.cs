@@ -44,9 +44,19 @@ public class EventCase100 : MonoBehaviour
         {
             if (page == 102)
             {
-                if (SelNo != 1)//もしセルナンバーが1じゃなかったら
+                if (SelNo == 1)
                 {
-                    page = 9999;
+                    page = 102;
+                }
+                else if (SelNo == 2)//もしセルナンバーが1じゃなかったら
+                {
+                    page = 199;
+                    StandardizedScore = StandardizedScore - 5;
+                }
+                else
+                {
+                    page = 299;
+                    StandardizedScore = StandardizedScore + 20;
                 }
             }
             page++;//ページを1足す
