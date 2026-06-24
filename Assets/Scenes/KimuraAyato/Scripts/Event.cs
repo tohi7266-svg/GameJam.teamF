@@ -9,7 +9,6 @@ public class Event : MonoBehaviour
     public Sprite title;
 
 
-
     //選択肢
     public GameObject Select;//選択肢の表示の操作のためのパーツ。選択肢を中に入れる。
     public GameObject SelAns;//選択中背景
@@ -81,6 +80,8 @@ public class Event : MonoBehaviour
             case 7:
                 StoryProgression.text = "俺の友人たちは全員別クラスになっていて、知っている人は小春だけだった。";
                 break;
+
+
         }
     }
 }
