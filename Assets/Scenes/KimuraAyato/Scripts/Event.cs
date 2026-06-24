@@ -25,7 +25,7 @@ public class Event : MonoBehaviour
     public int StandardizedScore = 40;//偏差値
     public int Favorability = 0;//好感度
 
-    private int page = 0;//ページ番号
+    public int page = 0;//ページ番号
     private int SelNo = 0;//選択中背景
  　 //その他
     private Image img;
@@ -45,23 +45,17 @@ public class Event : MonoBehaviour
             //休日分岐
             if (page == 51)
             {
-                if (SelNo == 1)
+                if (SelNo == 0)
                 {
                     page = 51;
-                    if(page==74)
-                    {
-                        page = 81;
-                    }
+
                 }
-                else if (SelNo == 2)//もしセルナンバーが1じゃなかったら
+                else if (SelNo == 1)//もしセルナンバーが1だったら
                 {
                     page = 74;
                     StandardizedScore = StandardizedScore - 5;
-                    if(page==77)
-                    {
-                        page = 81;
-                    }
                 }
+
                 else
                 {
                     page = 77;
@@ -72,22 +66,14 @@ public class Event : MonoBehaviour
             //勉強分岐
             if (page ==111 )
             {
-                if (SelNo == 1)
+                if (SelNo == 0)
                 {
                     page =111 ;
-                    if(page==116)
-                    {
-                        page = 121;
-                    }
                 }
-                else if (SelNo == 2)//もしセルナンバーが1じゃなかったら
+                else if (SelNo == 1)//もしセルナンバーが1なら
                 {
-                    page =117 ;
+                    page =116 ;
                     StandardizedScore = StandardizedScore - 5;
-                    if(page==118)
-                    {
-                        page = 121;
-                    }
                 }
                 else
                 {
@@ -96,16 +82,16 @@ public class Event : MonoBehaviour
                 }
             }
             //エンディング分岐
-            if (page ==121 )
+            if (page ==122 )
             {
                 if (StandardizedScore<40)
                 {
-                    page = 129;
+                    page = 131;
                 }
                
                 else
                 {
-                    page =121 ;
+                    page =122 ;
                     if(page==129)
                     {
                         return;
@@ -117,6 +103,8 @@ public class Event : MonoBehaviour
                         page++;//ページを1足す
       
         }
+
+
         switch (page)
         {
             //↓テンプレート(テキスト)
@@ -621,49 +609,66 @@ public class Event : MonoBehaviour
                 StoryProgression.text = "1人では効率が悪いと思ったが、\n意外にも集中して勉強を進めることができた。";
                 break;
 
-            //goodend
             case 122:
+                StoryProgression.text = "1月、俺は共通テストを終えた。";
+                break;
+
+            //goodend
+            case 123:
                 StoryProgression.text = "「やった！私たちどっちも合格だよ！」";
                 break;
-            case 123:
+            case 124:
                 StoryProgression.text = "小春がこちらを見て言う。";
                 break;
-            case 124:
+            case 125:
                 StoryProgression.text = "俺は小春と同じ大学にすすんだ。";
                 break;
-            case 125:
+            case 126:
                 StoryProgression.text = "決めたのはギリギリではあったが、\n難なく合格することができた";
                 break;
-            case 126:
+            case 127:
                 StoryProgression.text = "ここに決めた理由はまだ小春には伝えてない。";
                 break;
-            case 127:
+            case 128:
                 StoryProgression.text = "ここに決めたのは…";
                 break;
-            case 128:
+            case 129:
                 StoryProgression.text = "小春がいたから―――";
                 break;
-            case 129:
+            case 130:
                 StoryProgression.text = "ＧＯＯＤ　ＥＮＤ";
+                break;
+                case 131:
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    page = 0;
+                }
                 break;
 
 
             //badend
-            case 130:
+            case 132:
                 StoryProgression.text = "俺は燃え尽きていた";
                 break;
-            case 131:
+            case 133:
                 StoryProgression.text = "決めた進路先の受験に失敗したのだ";
                 break;
-            case 132:
+            case 134:
                 StoryProgression.text = "実力が及ばなかった";
                 break;
-            case 133:
-                StoryProgression.text = "滑り止めに行く気も起きず、部屋の隅で丸まっていた。";
+            case 135:
+                StoryProgression.text = "滑り止めに行く気も起きず、浪人することにした。";
                 break;
-            case 134:
+            case 136:
                 StoryProgression.text = "BAD END";
                 break;
+            case 137:
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    page = 0;
+                }
+                break;
+
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))//上矢印キーで上へ
         {
@@ -687,5 +692,23 @@ public class Event : MonoBehaviour
                 break;
 
         }
+        if (page == 74)
+        {
+            page = 82;
+        }
+        if (page == 78)
+        {
+            page = 82;
+        }
+        if (page == 119)
+        {
+            page = 122;
+        }
+        if (page == 118)
+        {
+            page = 121;
+        }
+
+
     }
 }
