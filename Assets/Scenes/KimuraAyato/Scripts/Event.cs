@@ -274,7 +274,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 19:
-                StoryProgression.text = "「日直サボらないでよ？";
+                StoryProgression.text = "「日直サボらないでよ？」";
                 break;
 
             case 20:
@@ -297,6 +297,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 24:
+                Koharu.SetActive(true);
                 StoryProgression.text = "「こうやって2人で何かするの久しぶりだね」";
                 break;
 
@@ -326,6 +327,7 @@ public class Event : MonoBehaviour
 
             case 31:
                 img.sprite = Class;
+                Select.SetActive(false);
                 StoryProgression.text = "隣になったのはクラスの男子だった。";
                 break;
 
@@ -336,11 +338,12 @@ public class Event : MonoBehaviour
             //体育祭
             case 33:
                 img.sprite = Black;
+                Select.SetActive(false);
                 StoryProgression.text = "この高校では5月上旬に\n体育祭が行われる。";
                 break;
 
             case 34:
-
+                //ここに体育祭の画像を挿入
                 StoryProgression.text = "俺は借人競走に出ることになっていた。";
                 break;
 
@@ -392,6 +395,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 45:
+                Koharu.SetActive(true);
                 StoryProgression.text = "俺は迷わずに小春の元へ向かい、\n手を引っ張る。";
                 break;
 
@@ -431,6 +435,8 @@ public class Event : MonoBehaviour
                 break;
 
             case 54:
+                Koharu.SetActive(false);
+                img.sprite = Black;
                 StoryProgression.text = "俺はその落胆の理由が分からないまま、\n体育祭を終えた。";
                 break;
 
@@ -448,7 +454,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 58:
-                img.sprite = title;
+                img.sprite = Black;
                 STORY.SetActive(false);
                 break;
 
