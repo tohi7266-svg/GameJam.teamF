@@ -17,7 +17,7 @@ public class Event : MonoBehaviour
     public Text Options3;
 
     //変数
-    public int StandardizedScore = 0;//偏差値
+    public int StandardizedScore = 40;//偏差値
     public int Favorability = 0;//好感度
 
     private int page = 0;//ページ番号
@@ -47,6 +47,16 @@ public class Event : MonoBehaviour
             //    StoryProgression.text = "";
             //    break;
 
+            //↓テンプレート(選択肢)
+            //case 8:
+            //    STORY.SetActive(true);
+            //    Select.SetActive(true);
+            //    img.sprite = title;
+            //    StoryProgression.text = "";
+            //    Options1.text = "1:" + "A";
+            //    Options2.text = "2:" + "B";
+            //    Options3.text = "3:" + "C";
+            //    break;
             case 0:
                 img.sprite = title;
                 STORY.SetActive(false);
@@ -81,6 +91,28 @@ public class Event : MonoBehaviour
                 StoryProgression.text = "俺の友人たちは全員別クラスになっていて、知っている人は小春だけだった。";
                 break;
 
+
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow))//上矢印キーで上へ
+        {
+            if (SelNo > 0) SelNo--;//上にスタックしないようにセルナンバーを制限
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))//下矢印キーで下へ
+        {
+            if (SelNo < 2) SelNo++;//下にスタックしないようにセルナンバーを制限
+        }
+        Transform transform = SelAns.GetComponent<Transform>();
+        switch (SelNo)
+        {
+            case 0:
+                transform.localPosition = new Vector3(500, 400, 0);//セルアンスの位置調整
+                break;
+            case 1:
+                transform.localPosition = new Vector3(500, 250, 0);//セルアンスの位置調整
+                break;
+            case 2:
+                transform.localPosition = new Vector3(500, 100, 0);//セルアンスの位置調整
+                break;
 
         }
     }
