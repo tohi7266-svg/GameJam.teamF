@@ -11,6 +11,9 @@ public class Event : MonoBehaviour
     public Sprite SchoolSpring;
     public Sprite Class;
 
+    //キャラ
+    public GameObject Koharu;
+
     //選択肢
     public GameObject Select;//選択肢の表示の操作のためのパーツ。選択肢を中に入れる。
     public GameObject SelAns;//選択中背景
@@ -62,6 +65,7 @@ public class Event : MonoBehaviour
         case 0:
                 img.sprite = title;
                 STORY.SetActive(false);
+                Koharu.SetActive(false);
                 break;
             case 1:
                 StandardizedScore = 40;
@@ -80,6 +84,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 4:
+                Koharu.SetActive(true);
                 StoryProgression.text = "声をかけてきたのは\n幼馴染の逢沢 小春(あいざわ こはる)。\n小中高同じで隣に住んでいる女の子だ。";
                 break;
 
