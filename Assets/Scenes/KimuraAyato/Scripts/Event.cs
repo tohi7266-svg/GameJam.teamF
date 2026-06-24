@@ -338,6 +338,7 @@ public class Event : MonoBehaviour
             //体育祭
             case 33:
                 img.sprite = Black;
+                Koharu.SetActive(false);
                 Select.SetActive(false);
                 StoryProgression.text = "この高校では5月上旬に\n体育祭が行われる。";
                 break;
