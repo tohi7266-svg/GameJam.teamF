@@ -42,8 +42,80 @@ public class Event : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))//もしエンターキーが押されたなら
         {
-            page++;//ページを1足す
+            //休日分岐
+            if (page == 51)
+            {
+                if (SelNo == 1)
+                {
+                    page = 51;
+                    if(page==74)
+                    {
+                        page = 81;
+                    }
+                }
+                else if (SelNo == 2)//もしセルナンバーが1じゃなかったら
+                {
+                    page = 74;
+                    StandardizedScore = StandardizedScore - 5;
+                    if(page==77)
+                    {
+                        page = 81;
+                    }
+                }
+                else
+                {
+                    page = 77;
+                    StandardizedScore = StandardizedScore + 20;
+                }
 
+            }
+            //勉強分岐
+            if (page ==111 )
+            {
+                if (SelNo == 1)
+                {
+                    page =111 ;
+                    if(page==116)
+                    {
+                        page = 121;
+                    }
+                }
+                else if (SelNo == 2)//もしセルナンバーが1じゃなかったら
+                {
+                    page =117 ;
+                    StandardizedScore = StandardizedScore - 5;
+                    if(page==118)
+                    {
+                        page = 121;
+                    }
+                }
+                else
+                {
+                    page =119 ;
+                    StandardizedScore = StandardizedScore + 20;
+                }
+            }
+            //エンディング分岐
+            if (page ==121 )
+            {
+                if (StandardizedScore<40)
+                {
+                    page = 129;
+                }
+               
+                else
+                {
+                    page =121 ;
+                    if(page==129)
+                    {
+                        return;
+                    }
+                }
+
+            }
+
+                        page++;//ページを1足す
+      
         }
         switch (page)
         {
@@ -101,6 +173,497 @@ public class Event : MonoBehaviour
                 StoryProgression.text = "俺の友人たちは全員別クラスになっていて、知っている人は小春だけだった。";
                 break;
 
+                //席替え放課後
+            case 8:
+                StoryProgression.text = "「隣の席だね！悠くん！」";
+                break;
+            case 9:
+                StoryProgression.text = "くじ引きの翌日の朝、部活で先に学校に来ていた逢沢が\n教室に戻ってきて声をかけてきた";
+                break;
+            case 10:
+                StoryProgression.text = "「小中で何回か一緒になっただろ」";
+                break;
+            case 11:
+                StoryProgression.text = "高校じゃ初めてだからな。\nなんてことを思ったが口に出さなかった";
+                break;
+            case 12:
+                StoryProgression.text = "小春は嬉しそうにしている。\nそんなに嬉しいものだろうか。";
+                break;
+            case 13:
+                StoryProgression.text = "そんなことを考えていると、先生が入ってきてHRが始まった―";
+                break;
+            case 14:
+                StoryProgression.text = "「―それじゃあ桜庭と逢沢、今日の日直は二人に頼む」";
+                break;
+            case 15:
+                StoryProgression.text = "いきなり指名されてしまった";
+                break;
+            case 16:
+                StoryProgression.text = "「日直サボらないでよ？";
+                break;
+            case 17:
+                StoryProgression.text = "「俺をなんだと思っているんだ」";
+                break;
+            case 18:
+                StoryProgression.text = "小春からのからかうような言葉にムスッとした声で返す。";
+                break;
+            case 19:
+                StoryProgression.text = "―――放課後―――";
+                break;
+            case 20:
+                StoryProgression.text = "二人で黒板を消し、日誌を書く。";
+                break;
+            case 21:
+                StoryProgression.text = "「こうやって2人で何かするの久しぶりだね」";
+                break;
+            case 22:
+                StoryProgression.text = "不意にそんなことを言ってくる";
+                break;
+            case 23:
+                StoryProgression.text = "「そうだな…」";
+                break;
+            case 24:
+                StoryProgression.text = "時々話してくる小春の言葉に、\n一言二言返しながら日直の作業を進める。";
+                break;
+            case 25:
+                StoryProgression.text = "職員室へ持ってきて欲しいと頼まれていたプリント類を持ってきょうしつを出る。";
+                break;
+            case 26:
+                StoryProgression.text = "プリントを職員室に届けた後、一緒に帰路に着く。";
+                break;
+            case 27:
+                StoryProgression.text = "大したことでもないことを言い合いながら、二年通った道を2人で帰った";
+                break;
+
+                //体育祭
+            case 28:
+                StoryProgression.text = "この高校では5月上旬に\n体育祭が行われる。";
+                break;
+
+            case 29:
+                StoryProgression.text = "俺は借人競走に出ることになっていた。";
+                break;
+
+            case 30:
+                StoryProgression.text = "借人競走の時間になるまでは\n他の競技を見ながら過ごしていく。";
+                break;
+
+            case 31:
+                StoryProgression.text = "体育祭も佳境を迎え、\n借人競走の時間がやってきた。";
+                break;
+
+            case 32:
+                StoryProgression.text = "俺のクラスはこの借人競走で\n総合1位を取ることができれば";
+                break;
+
+            case 33:
+                StoryProgression.text = "優勝は確実なものになる\nといった状況だった。";
+                break;
+
+            case 34:
+                StoryProgression.text = "俺の番がやってきた。";
+                break;
+
+            case 35:
+                StoryProgression.text = "俺は完璧なスタートを決め、\n一番にお題の札の元までたどり着いた。";
+                break;
+
+            case 36:
+                StoryProgression.text = "すぐに取れる位置にあるのは3枚だ。\nどれにしようか。";
+                break;
+
+            case 37:
+                StoryProgression.text = "俺は真ん中の札を取った。";
+                break;
+
+            case 38:
+                StoryProgression.text = "内容は\n「この学校の生徒で1番信頼している人」\nだった。";
+                break;
+
+            case 39:
+                StoryProgression.text = "俺は迷わずに小春の元へ向かい、\n手を引っ張る。";
+                break;
+
+            case 40:
+                StoryProgression.text = "「えっ？えっ？」";
+                break;
+
+            case 41:
+                StoryProgression.text = "いきなりのことに驚く小春や" +
+                    "黄色い声をあげてくるクラスメイトたちの声を聞かないようにしながら、ゴールへ向かう。";
+                break;
+
+            case 42:
+                StoryProgression.text = "迷わなかったことで余裕の1位を取ることができた。" +
+                    "\n借人競走の総合1位はこれで確実なものとなった。";
+                break;
+
+            case 43:
+                StoryProgression.text = "「ごめん。いきなり手を取って。」";
+                break;
+
+            case 44:
+                StoryProgression.text = "「う、ううん！そ、それで\nお題はなんだったの？」";
+                break;
+
+            case 45:
+                StoryProgression.text = "俺は手に持っていたお題を見せる。";
+                break;
+
+            case 46:
+                StoryProgression.text = "「この学校の生徒で1番信頼している人・・・" +
+                    "\nそっか・・・」";
+                break;
+
+            case 47:
+                StoryProgression.text = "なぜだか落胆した様子だった。";
+                break;
+
+            case 48:
+                StoryProgression.text = "俺はその落胆の理由が分からないまま、\n体育祭を終えた。";
+                break;
+
+            case 49:
+                img.sprite = title;
+                STORY.SetActive(false);
+                break;
+
+            case 50:
+                Select.SetActive(false);
+                STORY.SetActive(true);
+                StoryProgression.text = "夏休みの真ん中、\n1日暇な日ができたので出かけようかと思った。";
+                break;
+
+            case 51:
+                STORY.SetActive(true);
+                Select.SetActive(true);
+                img.sprite = title;
+                StoryProgression.text = "どこへ行こうか";
+                Options1.text = "1:" + "幼馴染を誘う";
+                Options2.text = "2:" + "ゲームセンターに行く";
+                Options3.text = "3:" + "本屋に行く";
+                break;
+
+            case 52:
+                Select.SetActive(false);
+                STORY.SetActive(true);
+                StoryProgression.text = "小春を誘って適当に街をぶらつくことにした。";
+                break;
+
+            case 53:
+                StoryProgression.text = "電話をすると二つ返事でOKだったので、家の前で待つ";
+                break;
+
+            case 54:
+                StoryProgression.text = "「お待たせ！行こ！」";
+                break;
+
+            case 56:
+                StoryProgression.text = "やけにテンションが高いようだが、気にしないで行く。";
+                break;
+
+            case 57:
+                StoryProgression.text = "街に出て、いろんな店に入ったり雑貨屋に入ったりする。\n小春とこんなことをしたのは久しぶりかもしれない";
+                break;
+
+            case 58:
+                StoryProgression.text = "学校で会うことも多かったからか、\n休みの日にわざわざ会うことは少なかった。\n隣の家だからというのもあるかも知れないな。";
+                break;
+
+            case 59:
+                StoryProgression.text = "俺たちは少し電車で移動して水族館へ来た。\n小春が行きたいと言ったからだ。";
+                break;
+
+            case 60:
+                StoryProgression.text = "「おっきいねー」";
+                break;
+
+            case 61:
+                StoryProgression.text = "一番大きな水槽を泳ぐジンベイザメをみて小春が言う。";
+                break;
+
+            case 62:
+                StoryProgression.text = "子供みたいに水槽に張り付き目を輝かせる小春に、\n俺は少しドキッとしてしまった。";
+                break;
+
+            case 63:
+                StoryProgression.text = "(小春ってこんなに可愛かったか......？)";
+                break;
+
+            case 64:
+                StoryProgression.text = "「楽しかったね！」";
+                break;
+
+            case 65:
+                StoryProgression.text = "とびきりの笑顔を俺に向けてくる小春。\n思わず顔を逸らしてしまった。\n夕日に照らされている小春の顔は直視できるものではなかった";
+                break;
+
+            case 66:
+                StoryProgression.text = "ずっと見てきた顔なのに。";
+                break;
+
+            case 67:
+                StoryProgression.text = "「どうしたの？」";
+                break;
+
+            case 68:
+                StoryProgression.text = "逸らした俺の顔を覗き込むように回り込んできた。";
+                break;
+
+            case 69:
+                StoryProgression.text = "身長差と俺が俯いていたこともあり、\n上目遣いで俺を見てくる。";
+                break;
+
+            case 70:
+                StoryProgression.text = "「おわっ！」";
+                break;
+
+            case 71:
+                StoryProgression.text = "いきなり目の前に現れた小春の破壊力に\n思わず声をあげてしまった。";
+                break;
+
+            case 72:
+                StoryProgression.text = "「ご、ごめん。驚かせちゃった？」\n「い、いや。大丈夫」";
+                break;
+
+            case 73:
+                StoryProgression.text = "手のひらを向けて大丈夫だと示す。";
+                break;
+
+            case 74:
+                StoryProgression.text = "家に帰ってからも\nその日の小春の顔が頭によぎって、\n夜もろくに眠れなかった。";
+
+                break;
+            //case100～終わり
+            //case200～ゲーセン
+            //知力 -5
+            case 75:
+                StoryProgression.text = "ゲームセンターに行くことにした。";
+                break;
+
+            case 76:
+                StoryProgression.text = "適当にUFOキャッチャーで遊んだり、\nアーケードゲームで遊んだ。";
+                break;
+
+            case 77:
+                StoryProgression.text = "楽しくその日を過ごすことができた。";
+                break;
+
+            //case300～本屋
+            //知力 +20
+            case 78:
+                StoryProgression.text = "本屋に行くことにした";
+                break;
+
+            case 79:
+                StoryProgression.text = "少し前まで追っていた漫画の最新刊を見つけ、\n購入することにした。";
+                break;
+
+            case 80:
+                StoryProgression.text = "その他にもいくつか面白そうな漫画を購入した。";
+                break;
+
+            case 81:
+                StoryProgression.text = "ついでに、参考書や勉強の役に立ちそうなものも購入した。\n進路こそ決めていないが、どの進路にしても\n困らないようにするためだ。";
+                break;
+
+                //文化祭
+            case 82:
+                StoryProgression.text = "夏休みが終わり、九月。\n高校生最後の文化祭がやってきた";
+                break;
+            case 83:
+                StoryProgression.text = "舞台発表や出店、どれも興味を唆る";
+                break;
+            case 84:
+                StoryProgression.text = "一人で回るのも寂しいから小春を誘おうと思う";
+                break;
+            case 85:
+                StoryProgression.text = "当番が終わってすぐの小春を誘うことにした";
+                break;
+            case 86:
+                StoryProgression.text = "「うん！いいよ！」";
+                break;
+            case 87:
+                StoryProgression.text = "朝から準備に追われて俺の一つ前の枠で\n当番をしていたのに元気だ";
+                break;
+            case 88:
+                StoryProgression.text = "「どこから回る？」";
+                break;
+            case 89:
+                StoryProgression.text = "そうだなぁ…";
+                break;
+            case 90:
+                StoryProgression.text = "――――――";
+                break;
+            case 91:
+                StoryProgression.text = "他クラスの出店を一通り回った後、他学年の舞台発表や展示を見て回った。";
+                break;
+            case 92:
+                StoryProgression.text = "全部を回った訳では無いけれど、時間が過ぎるのは早いもので。";
+                break;
+            case 93:
+                StoryProgression.text = "『文化祭を終了します』";
+                break;
+            case 94:
+                StoryProgression.text = "そんな終了宣言と共に高校最後の文化祭は終わりを迎えた";
+                break;
+            case 95:
+                StoryProgression.text = "――――――";
+                break;
+            case 96:
+                StoryProgression.text = "「終わっちゃったねー文化祭」";
+                break;
+            case 97:
+                StoryProgression.text = "二人での帰り道、小春がそんなことを言う";
+                break;
+            case 98:
+                StoryProgression.text = "「そういえば悠くんはまだ進路決めてないんだっけ？」";
+                break;
+            case 99:
+                StoryProgression.text = "不意にそんなことを聞かれる";
+                break;
+            case 100:
+                StoryProgression.text = "俺は未だに進学先を決めていなかった。先生からも色々\n言われているがどうしてもここが良いという進路\nが無かったのだ。";
+                break;
+            case 101:
+                StoryProgression.text = "少し前のを歩く小春の後ろ姿を見ながら、自分の進路を考える。";
+                break;
+            case 102:
+                StoryProgression.text = "「今日は誘ってくれてありがとうね！悠くん」";
+                break;
+            case 103:
+                StoryProgression.text = "パッと小春がこちらに振り返る。\nそれを俺は逃げる暇もなく目に入れてしまった。";
+                break;
+            case 104:
+                StoryProgression.text = "「あ、あぁうん。こちらこそ」";
+                break;
+            case 105:
+                StoryProgression.text = "ちょっと動揺しながら答えた。";
+                break;
+            case 106:
+                StoryProgression.text = "鼻歌を歌いながら機嫌よく歩く小春の後ろ姿がその日ずっと頭から離れなかった";
+                break;
+
+            case 107:
+                img.sprite = title;
+                STORY.SetActive(false);
+                break;
+
+            case 108:
+                Select.SetActive(false);
+                STORY.SetActive(true);
+                StoryProgression.text = "2学期も終わりが近づいてきた。\n高校3年は実質この2学期で終わり。";
+                break;
+
+            case 109:
+                Select.SetActive(false);
+                STORY.SetActive(true);
+                StoryProgression.text = "だがその前に重要なものが残っている。\n期末テストだ。";
+                break;
+
+            case 110:
+                Select.SetActive(false);
+                STORY.SetActive(true);
+                StoryProgression.text = "テスト勉強を一人でやっても\n効率が悪いので誰かを誘おう。";
+                break;
+
+            case 111:
+                STORY.SetActive(true);
+                Select.SetActive(true);
+                img.sprite = title;
+               StoryProgression.text = "誰を誘おうか";
+                Options1.text = "1:" + "小春";
+                Options2.text = "2:" + "やらない";
+                Options3.text = "3:" + "1人でやる";
+                break;
+            //勉強イベメイン
+            case 112:
+                Select.SetActive(false);
+                STORY.SetActive(true);
+                StoryProgression.text = "小春を誘うことにした。";
+                break;
+
+            case 113:
+                StoryProgression.text = "放課後に俺の家でテスト勉強をすることになった。\nお互いに教え合いながらテスト勉強を進めていった";
+                break;
+
+            case 114:
+                StoryProgression.text = "これなら期末テストも問題ないだろう。";
+                break;
+
+            case 115:
+                StoryProgression.text = "「もう2学期も終わっちゃうけど...\n進路は決めたの？」";
+                break;
+
+            case 116:
+                StoryProgression.text = "俺は──────";
+                break;
+
+            //勉強イベ分岐1600～
+            case 117:
+                StoryProgression.text = "誘える人も思いつかないし、1人でやるのも面倒なので\nやらないことにした。";
+                break;
+
+            case 118:
+                StoryProgression.text = "やらなくても期末テストはそれなりに取れる自信がある。";
+                break;
+
+            //勉強イベ分岐1700～
+            case 119:
+                StoryProgression.text = "誘える人も思いつかなかったので\n図書館に行って1人で勉強することにした。";
+                break;
+
+            case 120:
+                StoryProgression.text = "時期が時期なので他校の学生の姿も見受けられた。";
+                break;
+
+            case 121:
+                StoryProgression.text = "1人では効率が悪いと思ったが、\n意外にも集中して勉強を進めることができた。";
+                break;
+
+            //goodend
+            case 122:
+                StoryProgression.text = "「やった！私たちどっちも合格だよ！」";
+                break;
+            case 123:
+                StoryProgression.text = "小春がこちらを見て言う。";
+                break;
+            case 124:
+                StoryProgression.text = "俺は小春と同じ大学にすすんだ。";
+                break;
+            case 125:
+                StoryProgression.text = "決めたのはギリギリではあったが、\n難なく合格することができた";
+                break;
+            case 126:
+                StoryProgression.text = "ここに決めた理由はまだ小春には伝えてない。";
+                break;
+            case 127:
+                StoryProgression.text = "ここに決めたのは…";
+                break;
+            case 128:
+                StoryProgression.text = "小春がいたから―――";
+                break;
+            case 129:
+                StoryProgression.text = "ＧＯＯＤ　ＥＮＤ";
+                break;
+
+
+            //badend
+            case 130:
+                StoryProgression.text = "俺は燃え尽きていた";
+                break;
+            case 131:
+                StoryProgression.text = "決めた進路先の受験に失敗したのだ";
+                break;
+            case 132:
+                StoryProgression.text = "実力が及ばなかった";
+                break;
+            case 133:
+                StoryProgression.text = "滑り止めに行く気も起きず、部屋の隅で丸まっていた。";
+                break;
+            case 134:
+                StoryProgression.text = "BAD END";
+                break;
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))//上矢印キーで上へ
         {
