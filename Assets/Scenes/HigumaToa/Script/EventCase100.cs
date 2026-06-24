@@ -1,13 +1,40 @@
 using NUnit.Framework.Internal;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Event.v100 : MonoBehaviour
+public class EventCase100 : MonoBehaviour
 {
+    public Image Image;
+    public GameObject STORY;//選択肢・テキストボックスの表示の操作のためのパーツ。選択肢などを中に入れる。
+    public Text StoryProgression;//物語を表示するテキストボックス
+    public Text story;
+                                 //画像
+    public Sprite title;
+
+
+
+    //選択肢
+    public GameObject Select;//選択肢の表示の操作のためのパーツ。選択肢を中に入れる。
+    public GameObject SelAns;//選択中背景
+    public Text Select1;
+    public Text Select2;
+    public Text Select3;
+
+    //変数
+    public int StandardizedScore = 0;//偏差値
+    public int Favorability = 0;//好感度
+
+    private int page = 0;//ページ番号
+    private int SelNo = 0;//選択中背景
+                          //その他
+    private Image img;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        img = Image.GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -31,7 +58,7 @@ public class Event.v100 : MonoBehaviour
             //case 2:
             //    StoryProgression.text = "";
             //    break;
-            
+
             //　休日デートイベ
 
             case 100:
@@ -46,7 +73,7 @@ public class Event.v100 : MonoBehaviour
                 break;
 
             case 102:
-                NovelParts.SetActive(true);
+                STORY.SetActive(true);
                 Select.SetActive(true);
                 img.sprite = title;
                 story.text = "どこへ行こうか";
@@ -89,7 +116,7 @@ public class Event.v100 : MonoBehaviour
                 StoryProgression.text = "「おっきいねー」";
                 break;
 
-            case 111;
+            case 111:
                 StoryProgression.text = "一番大きな水槽を泳ぐジンベイザメをみて小春が言う。";
                 break;
 
@@ -147,3 +174,4 @@ public class Event.v100 : MonoBehaviour
 
         }
     }
+}
