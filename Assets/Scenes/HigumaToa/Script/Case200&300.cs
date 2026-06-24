@@ -48,13 +48,15 @@ public class EventCase200 : MonoBehaviour
                 {
                     page = 99;
                 }
-                if (SelNo == 2)//もしセルナンバーが1じゃなかったら
+                else if (SelNo == 2)//もしセルナンバーが1じゃなかったら
                 {
                     page = 199;
+                    StandardizedScore = StandardizedScore - 5;
                 }
-                if(SelNo == 3)
+                else
                 {
                     page = 299;
+                    StandardizedScore = StandardizedScore + 20;
                 }
             }
             page++;//ページを1足す
@@ -92,6 +94,7 @@ public class EventCase200 : MonoBehaviour
 
             //case100～終わり
             //case200～ゲーセン
+            //知力 -5
             case 200:
                 StoryProgression.text = "ゲームセンターに行くことにした。";
                 break;
@@ -105,6 +108,7 @@ public class EventCase200 : MonoBehaviour
                 break;
 
             //case300～本屋
+            //知力 +20
             case 300:
                 StoryProgression.text = "本屋に行くことにした";
                 break;
