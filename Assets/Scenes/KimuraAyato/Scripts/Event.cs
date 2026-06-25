@@ -98,9 +98,9 @@ public class Event : MonoBehaviour
                 if (SelNo == 0)
                 {
                     page = 62;
-
-
+                    StandardizedScore = StandardizedScore + 5;
                 }
+
                 else if (SelNo == 1)//もしセルナンバーが1だったら
                 {
                     page = 85;
