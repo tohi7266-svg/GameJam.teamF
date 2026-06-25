@@ -608,8 +608,13 @@ public class Event : MonoBehaviour
                 StoryProgression.text = "その他にもいくつか面白そうな漫画を購入した。";
                 break;
 
+<<<<<<< HEAD
             case 93:
                 StoryProgression.text = "ついでに、参考書や勉強の役に立ちそうなものも購入した。\n進路こそ決めていないが、どの進路にしても\n困らないようにするためだ。";
+=======
+            case 89:
+                StoryProgression.text = "ついでに、\n参考書や勉強の役に立ちそうなものも購入した。\n進路こそ決めていないが、どの進路にしても\n困らないようにするためだ。";
+>>>>>>> f91457e28c1c68efe093d3ed144d648383b0c6ab
                 break;
 
             //文化祭
@@ -949,42 +954,67 @@ public class Event : MonoBehaviour
 
         }
         //席替え小春
-        if(page == 30)
+        if(page == 31)
         {
             page = 34;
         }
         //体育祭小春
-        if(page == 54)
+        if(page == 55)
         {
             page = 60;
         }
         //休日小春
+<<<<<<< HEAD
         if (page == 84)
         {
             page = 93;
         }
         //休日ゲーセン
         if (page == 88)
+=======
+        if (page == 83)
+>>>>>>> f91457e28c1c68efe093d3ed144d648383b0c6ab
         {
             page = 93;
         }
+        //休日ゲーセン
+        if (page == 84)
+        {
+            page = 90;
+        }
         //文化祭小春
+<<<<<<< HEAD
         if (page == 119)
+=======
+        if (page == 116)
+>>>>>>> f91457e28c1c68efe093d3ed144d648383b0c6ab
         {
             page = 128;
         }
         //文化祭ソロ
+<<<<<<< HEAD
         if (page == 123)
+=======
+        if (page == 119)
+>>>>>>> f91457e28c1c68efe093d3ed144d648383b0c6ab
         {
             page = 128;
         }
         //勉強イベ小春
+<<<<<<< HEAD
         if(page == 137)
+=======
+        if(page == 127)
+>>>>>>> f91457e28c1c68efe093d3ed144d648383b0c6ab
         {
             page = 146;
         }
+<<<<<<< HEAD
         //やらない
         if(page == 140)
+=======
+        if(page == 133)
+>>>>>>> f91457e28c1c68efe093d3ed144d648383b0c6ab
         {
             page = 146;
         }
