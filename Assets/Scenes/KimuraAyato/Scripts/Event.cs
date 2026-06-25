@@ -1008,7 +1008,7 @@ public class Event : MonoBehaviour
         //やらない
         if(page == 140)
         {
-            page = 145;
+            page = 147;
         }
 
     }
