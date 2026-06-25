@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Event : MonoBehaviour
 {
+    [Header("確認用")]
+    public int page = 0;//ページ番号
+    [Header("設定")]
     public Image Image;
     public GameObject STORY;//選択肢・テキストボックスの表示の操作のためのパーツ。選択肢などを中に入れる。
     public Text StoryProgression;//物語を表示するテキストボックス
@@ -37,7 +40,7 @@ public class Event : MonoBehaviour
     public int StandardizedScore = 40;//偏差値
     public int Favorability = 0;//好感度
 
-    public int page = 0;//ページ番号
+   
     private int SelNo = 0;//選択中背景
  　 //その他
     private Image img;
@@ -49,6 +52,7 @@ public class Event : MonoBehaviour
         img = Image.GetComponent<Image>();
     }
 
+    
     // Update is called once per frame
     void Update()
     {
@@ -149,7 +153,7 @@ public class Event : MonoBehaviour
             {
                 if (StandardizedScore < 40) //BAD END
                 {
-                    page = 156;
+                    page = 155;
                 }
              
                 else                        //GOOD END
