@@ -8,14 +8,18 @@ public class Event : MonoBehaviour
 
     //画像
     public Sprite title;
+    public Sprite Room;
     public Sprite SchoolSpring;
     public Sprite Class;
     public Sprite Bookstore;
+    public Sprite Library;
+    public Sprite SportsFestival;
     public Sprite CultureFestival;
     public Sprite Passed;
     public Sprite RepeatStudent;
     public Sprite Hallway;
     public Sprite City;
+    public Sprite Shopping;
     public Sprite Black;
     //キャラ
     public GameObject Koharu;
@@ -215,7 +219,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 7:
-                StoryProgression.text = "俺の友人たちは全員別クラスになっていて、知っている人は小春だけだった。";
+                StoryProgression.text = "俺の友人たちは全員別クラスになっていて、\n知っている人は小春だけだった。";
                 break;
 
             //席替えイベ
@@ -246,7 +250,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 12:
-                StoryProgression.text = "くじ引きの翌日の朝、部活で先に学校に来ていた小春が\n教室に戻ってきて声をかけてきた";
+                StoryProgression.text = "くじ引きの翌日の朝、\n部活で先に学校に来ていた小春が\n教室に戻ってきて声をかけてきた";
                 break;
 
             case 13:
@@ -262,11 +266,11 @@ public class Event : MonoBehaviour
                 break;
 
             case 16:
-                StoryProgression.text = "そんなことを考えていると、先生が入ってきてHRが始まった―";
+                StoryProgression.text = "そんなことを考えていると、\n先生が入ってきてHRが始まった―";
                 break;
 
             case 17:
-                StoryProgression.text = "「―それじゃあ桜庭と逢沢、今日の日直は二人に頼む」";
+                StoryProgression.text = "「―それじゃあ\n桜庭と逢沢、今日の日直は二人に頼む」";
                 break;
 
             case 18:
@@ -322,7 +326,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 30:
-                StoryProgression.text = "大したことでもないことを言い合いながら、二年通った道を2人で帰った";
+                StoryProgression.text = "大したことでもないことを言い合いながら、\n二年通った道を2人で帰った";
                 break;
 
             case 31:
@@ -344,7 +348,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 34:
-                //ここに体育祭の画像を挿入
+                img.sprite= SportsFestival;
                 StoryProgression.text = "俺は借人競走に出ることになっていた。";
                 break;
 
@@ -380,7 +384,7 @@ public class Event : MonoBehaviour
             case 42:
                 STORY.SetActive(true);
                 Select.SetActive(true);
-                img.sprite = title;
+                img.sprite = SportsFestival;
                 StoryProgression.text = "どれにしようか";
                 Options1.text = "1:" + "左の札";
                 Options2.text = "2:" + "真ん中の札";
@@ -388,6 +392,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 43:
+                Select.SetActive(false);
                 StoryProgression.text = "俺は真ん中の札を取った。";
                 break;
 
@@ -410,7 +415,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 48:
-                StoryProgression.text = "迷わなかったことで余裕の1位を取ることができた。" +
+                StoryProgression.text = "迷わなかったことで、\n余裕の1位を取ることができた。" +
                     "\n借人競走の総合1位はこれで確実なものとなった。";
                 break;
 
@@ -419,7 +424,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 50:
-                StoryProgression.text = "「う、ううん！そ、それで\nお題はなんだったの？」";
+                StoryProgression.text = "「う、ううん！\nそ、それでお題はなんだったの？」";
                 break;
 
             case 51:
@@ -469,7 +474,7 @@ public class Event : MonoBehaviour
             case 60:
                 STORY.SetActive(true);
                 Select.SetActive(true);
-                img.sprite = title;
+                img.sprite = Shopping;
                 StoryProgression.text = "どこへ行こうか";
                 Options1.text = "1:" + "幼馴染を誘う";
                 Options2.text = "2:" + "ゲームセンターに行く";
@@ -488,6 +493,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 63:
+                Koharu.SetActive(true);
                 StoryProgression.text = "「お待たせ！行こ！」";
                 break;
 
@@ -516,7 +522,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 70:
-                StoryProgression.text = "子供みたいに水槽に張り付き目を輝かせる小春に、\n俺は少しドキッとしてしまった。";
+                StoryProgression.text = "子供みたいに水槽に張り付き\n目を輝かせる小春に、\n俺は少しドキッとしてしまった。";
                 break;
 
             case 71:
@@ -528,7 +534,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 73:
-                StoryProgression.text = "とびきりの笑顔を俺に向けてくる小春。\n思わず顔を逸らしてしまった。\n夕日に照らされている小春の顔は直視できるものではなかった";
+                StoryProgression.text = "とびきりの笑顔を俺に向けてくる小春。\n思わず顔を逸らしてしまった。夕日に照らされている\n小春の顔は直視できるものではなかった。";
                 break;
 
             case 74:
@@ -564,6 +570,8 @@ public class Event : MonoBehaviour
                 break;
 
             case 82:
+                Koharu.SetActive(false);
+                img.sprite = Black;
                 StoryProgression.text = "家に帰ってからも\nその日の小春の顔が頭によぎって、\n夜もろくに眠れなかった。";
 
                 break;
@@ -587,6 +595,7 @@ public class Event : MonoBehaviour
             //知力 +20
             case 86:
                 Select.SetActive(false);
+                img.sprite = Bookstore;
                 StoryProgression.text = "本屋に行くことにした";
                 break;
 
@@ -604,9 +613,12 @@ public class Event : MonoBehaviour
 
                 //文化祭
             case 90:
+                img.sprite = Black;
+                Koharu.SetActive(false);
                 StoryProgression.text = "夏休みが終わり、九月。\n高校生最後の文化祭がやってきた";
                 break;
             case 91:
+                img.sprite = CultureFestival;
                 StoryProgression.text = "舞台発表や出店、どれも興味を唆る";
                 break;
             case 92:
@@ -617,7 +629,7 @@ public class Event : MonoBehaviour
             case 93:
                 STORY.SetActive(true);
                 Select.SetActive(true);
-                img.sprite = title;
+                img.sprite = CultureFestival;
                 StoryProgression.text = "誰を誘おうか";
                 Options1.text = "1:" + "小春";
                 Options2.text = "2:" + "一人で回る";
@@ -625,10 +637,12 @@ public class Event : MonoBehaviour
                 break;
 
             case 94:
+                Select.SetActive(false);
                 StoryProgression.text = "当番が終わってすぐの小春を誘うことにした";
                 break;
 
             case 95:
+                Koharu.SetActive(true);
                 StoryProgression.text = "「うん！いいよ！」";
                 break;
 
@@ -645,6 +659,8 @@ public class Event : MonoBehaviour
                 break;
 
             case 99:
+                Koharu.SetActive(false);
+                img.sprite = Black;
                 StoryProgression.text = "――――――";
                 break;
 
@@ -669,6 +685,8 @@ public class Event : MonoBehaviour
                 break;
 
             case 105:
+                img.sprite = City;
+                Koharu.SetActive(true);
                 StoryProgression.text = "「終わっちゃったねー文化祭」";
                 break;
 
@@ -677,7 +695,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 107:
-                StoryProgression.text = "「そういえば悠くんはまだ進路決めてないんだっけ？」";
+                StoryProgression.text = "「そういえば、\n悠くんはまだ進路決めてないんだっけ？」";
                 break;
 
             case 108:
@@ -685,7 +703,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 109:
-                StoryProgression.text = "俺は未だに進学先を決めていなかった。先生からも色々\n言われているがどうしてもここが良いという進路\nが無かったのだ。";
+                StoryProgression.text = "俺は未だに進学先を決めていなかった。\n先生からも色々言われているがどうしても\nここが良いという進路が無かったのだ。";
                 break;
 
             case 110:
@@ -709,6 +727,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 115:
+                img.sprite = Black;
                 StoryProgression.text = "鼻歌を歌いながら機嫌よく歩く小春の後ろ姿がその日ずっと頭から離れなかった";
                 break;
 
@@ -722,6 +741,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 118:
+                img.sprite = Black;
                 StoryProgression.text = "そんな終了宣言と共に高校最後の文化祭は終わりを迎えた";
                 break;
 
@@ -735,17 +755,19 @@ public class Event : MonoBehaviour
                 break;
 
             case 121:
+                img.sprite = Black;
                 StoryProgression.text = "そんな終了宣言と共に高校最後の文化祭は終わりを迎えた";
                 break;
 
             case 122:
-                img.sprite = title;
+                img.sprite = Room;
                 STORY.SetActive(false);
                 break;
 
             case 123:
                 Select.SetActive(false);
                 STORY.SetActive(true);
+                img.sprite = Room;
                 StoryProgression.text = "2学期も終わりが近づいてきた。\n高校3年は実質この2学期で終わり。";
                 break;
 
@@ -764,7 +786,7 @@ public class Event : MonoBehaviour
             case 126:
                 STORY.SetActive(true);
                 Select.SetActive(true);
-                img.sprite = title;
+                img.sprite = Room;
                StoryProgression.text = "誰を誘おうか";
                 Options1.text = "1:" + "小春";
                 Options2.text = "2:" + "やらない";
@@ -786,10 +808,13 @@ public class Event : MonoBehaviour
                 break;
 
             case 130:
+                Koharu.SetActive(true);
                 StoryProgression.text = "「もう2学期も終わっちゃうけど...\n進路は決めたの？」";
                 break;
 
             case 131:
+                Koharu.SetActive(false);
+                img.sprite = Black;
                 StoryProgression.text = "俺は──────";
                 break;
 
@@ -804,10 +829,12 @@ public class Event : MonoBehaviour
 
             //勉強単独
             case 134:
+                img.sprite = Black;
                 StoryProgression.text = "誘える人も思いつかなかったので\n図書館に行って1人で勉強することにした。";
                 break;
 
             case 135:
+                img.sprite= Library;
                 StoryProgression.text = "時期が時期なので他校の学生の姿も見受けられた。";
                 break;
 
@@ -817,6 +844,7 @@ public class Event : MonoBehaviour
 
             case 137:
                 img.sprite = Black;
+                Koharu.SetActive(false);
                 StoryProgression.text = "1月、俺は共通テストを終えた。";
                 break;
 
@@ -853,7 +881,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 145:
-                StoryProgression.text = "ＧＯＯＤ　ＥＮＤ";
+                StoryProgression.text = "GOOD　END";
                 break;
 
                 case 146:
