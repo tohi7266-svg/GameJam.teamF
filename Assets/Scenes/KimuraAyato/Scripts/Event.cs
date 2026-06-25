@@ -99,6 +99,7 @@ public class Event : MonoBehaviour
                 {
                     page = 62;
 
+
                 }
                 else if (SelNo == 1)//もしセルナンバーが1だったら
                 {
@@ -136,6 +137,7 @@ public class Event : MonoBehaviour
                 if (SelNo == 0)
                 {
                     page = 132;
+                    StandardizedScore = StandardizedScore + 5;
                 }
                 else if (SelNo == 1)//もしセルナンバーが1なら
                 {
