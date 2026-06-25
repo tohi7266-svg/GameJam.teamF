@@ -145,7 +145,7 @@ public class Event : MonoBehaviour
                 }
             }
             //エンディング分岐
-            if (page == 147)
+            if (page == 145)
             {
                 if (StandardizedScore < 40) //BAD END
                 {
@@ -992,7 +992,7 @@ public class Event : MonoBehaviour
         //休日小春
         if (page == 84)
         {
-            page = 95;
+            page = 94;
         }
         //休日ゲーセン
         if (page == 89)
@@ -1017,7 +1017,7 @@ public class Event : MonoBehaviour
         //やらない
         if(page == 140)
         {
-            page = 147;
+            page = 145;
         }
 
     }
