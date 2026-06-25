@@ -19,7 +19,7 @@ public class Eventcopy : MonoBehaviour
     public Sprite Black;
     //キャラ
     public GameObject Koharu;
-
+    public GameObject KoharuCasual;
     //選択肢
     public GameObject Select;//選択肢の表示の操作のためのパーツ。選択肢を中に入れる。
     public GameObject SelAns;//選択中背景

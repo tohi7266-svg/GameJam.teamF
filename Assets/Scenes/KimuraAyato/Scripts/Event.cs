@@ -12,6 +12,8 @@ public class Event : MonoBehaviour
     public Sprite SchoolSpring;
     public Sprite Class;
     public Sprite Bookstore;
+    public Sprite Aquarium;
+    public Sprite GameCenter;
     public Sprite Library;
     public Sprite SportsFestival;
     public Sprite CultureFestival;
@@ -23,7 +25,7 @@ public class Event : MonoBehaviour
     public Sprite Black;
     //キャラ
     public GameObject Koharu;
-
+    public GameObject KoharuCasual;
     //選択肢
     public GameObject Select;//選択肢の表示の操作のためのパーツ。選択肢を中に入れる。
     public GameObject SelAns;//選択中背景
@@ -183,6 +185,7 @@ public class Event : MonoBehaviour
                 img.sprite = title;
                 STORY.SetActive(false);
                 Koharu.SetActive(false);
+                KoharuCasual.SetActive(false);
                 break;
             case 1:
                 StandardizedScore = 40;
@@ -495,7 +498,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 65:
-                Koharu.SetActive(true);
+                KoharuCasual.SetActive(true);
                 StoryProgression.text = "「お待たせ！行こ！」";
                 break;
 
@@ -512,6 +515,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 69:
+                img.sprite = Aquarium;
                 StoryProgression.text = "俺たちは少し電車で移動して水族館へ来た。\n小春が行きたいと言ったからだ。";
                 break;
 
@@ -572,7 +576,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 84:
-                Koharu.SetActive(false);
+                KoharuCasual.SetActive(false);
                 img.sprite = Black;
                 StoryProgression.text = "家に帰ってからも\nその日の小春の顔が頭によぎって、\n夜もろくに眠れなかった。";
                 break;
@@ -584,6 +588,7 @@ public class Event : MonoBehaviour
             //知力 -5
             case 86:
                 Select.SetActive(false);
+                img.sprite = GameCenter;
                 StoryProgression.text = "ゲームセンターに行くことにした。";
                 break;
 
@@ -592,6 +597,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 88:
+                img.sprite = Black;
                 StoryProgression.text = "楽しくその日を過ごすことができた。";
                 break;
 
@@ -775,12 +781,15 @@ public class Event : MonoBehaviour
 
             case 128:
                 img.sprite = Room;
+                Koharu.SetActive(false);
                 STORY.SetActive(false);
                 break;
 
             case 129:
                 Select.SetActive(false);
                 STORY.SetActive(true);
+                Koharu.SetActive(false);
+                KoharuCasual.SetActive(false);
                 img.sprite = Room;
                 StoryProgression.text = "2学期も終わりが近づいてきた。\n高校3年は実質この2学期で終わり。";
                 break;
@@ -823,12 +832,12 @@ public class Event : MonoBehaviour
                 break;
 
             case 136:
-                Koharu.SetActive(true);
+                KoharuCasual.SetActive(true);
                 StoryProgression.text = "「もう2学期も終わっちゃうけど...\n進路は決めたの？」";
                 break;
 
             case 137:
-                Koharu.SetActive(false);
+                KoharuCasual.SetActive(false);
                 img.sprite = Black;
                 StoryProgression.text = "俺は──────";
                 break;
