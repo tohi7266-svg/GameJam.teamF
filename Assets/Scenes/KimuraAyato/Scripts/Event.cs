@@ -158,7 +158,7 @@ public class Event : MonoBehaviour
              
                 else                        //GOOD END
                 {
-                    page =  147;
+                    page =  146;
                 }
 
             }
