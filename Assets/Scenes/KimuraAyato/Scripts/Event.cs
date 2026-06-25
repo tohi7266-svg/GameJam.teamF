@@ -599,7 +599,7 @@ public class Event : MonoBehaviour
                 break;
 
             case 89:
-                StoryProgression.text = "ついでに、参考書や勉強の役に立ちそうなものも購入した。\n進路こそ決めていないが、どの進路にしても\n困らないようにするためだ。";
+                StoryProgression.text = "ついでに、\n参考書や勉強の役に立ちそうなものも購入した。\n進路こそ決めていないが、どの進路にしても\n困らないようにするためだ。";
                 break;
 
                 //文化祭
@@ -919,41 +919,41 @@ public class Event : MonoBehaviour
 
         }
         //席替え小春
-        if(page == 30)
+        if(page == 31)
         {
             page = 33;
         }
         //体育祭小春
-        if(page == 54)
+        if(page == 55)
         {
             page = 58;
         }
         //休日小春
-        if (page == 82)
-        {
-            page = 90;
-        }
-        //休日ゲーセン
         if (page == 83)
         {
             page = 90;
         }
+        //休日ゲーセン
+        if (page == 84)
+        {
+            page = 90;
+        }
         //文化祭小春
-        if (page == 115)
+        if (page == 116)
         {
             page = 122;
         }
         //文化祭ソロ
-        if (page == 118)
+        if (page == 119)
         {
             page = 122;
         }
         //勉強イベ小春
-        if(page == 126)
+        if(page == 127)
         {
             page = 137;
         }
-        if(page == 132)
+        if(page == 133)
         {
             page = 137;
         }
